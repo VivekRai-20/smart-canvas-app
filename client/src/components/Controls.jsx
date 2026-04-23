@@ -4,7 +4,7 @@ const Controls = ({ points, canvasRef }) => {
   const handleSave = async () => {
     const token = localStorage.getItem("token");
 
-    const res = await fetch("http://localhost:3001/api/save-drawing", {
+    const res = await fetch("https://smart-canvas-app-4.onrender.com/api/save-drawing", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

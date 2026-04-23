@@ -12,7 +12,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:3001/api/login", {
+    const res = await fetch("https://smart-canvas-app-4.onrender.com/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

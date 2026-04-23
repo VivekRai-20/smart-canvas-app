@@ -13,7 +13,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await fetch("http://localhost:3001/api/register", {
+    await fetch("https://smart-canvas-app-4.onrender.com/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
