@@ -73,3 +73,4 @@ function recognizeShape(points) {
 }
 
 module.exports = recognizeShape;
+
