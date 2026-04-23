@@ -1,8 +1,10 @@
 const mongoose = require("mongoose");
 const dns = require("dns");
 
-// Override DNS to use Google's servers - fixes SRV lookup issues on restrictive networks
-dns.setServers(["8.8.8.8", "8.8.4.4", "1.1.1.1"]);
+// Override DNS to use Google's servers locally - fixes SRV lookup issues on restrictive networks
+if (process.env.NODE_ENV !== "production") {
+  dns.setServers(["8.8.8.8", "8.8.4.4", "1.1.1.1"]);
+}
 
 const connectDB = async () => {
   try {
